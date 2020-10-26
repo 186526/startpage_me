@@ -1,11 +1,5 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
-
-import confetti from 'canvas-confetti';
-
-confetti.create(document.getElementById('canvas'), {
-  resize: true,
-  useWorker: true,
-})({ particleCount: 200, spread: 200 });
+import { dns } from "./dns.js";
+import { terminal } from "./terminal.js";
+dns.doh_json_api("186526.xyz", "A", "119.29.29.29").then(e => { console.log(e); });
+let a = new terminal();
+a.mount("body");
