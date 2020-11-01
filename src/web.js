@@ -92,4 +92,22 @@ async function dig(domain, type, short = false) {
     return 'Domain not found';
   }
 }
-export { dns, dig };
+async function curl(input, args){
+  if (input === 'curl') {
+    return 'curl url [GET/POST/PUT/DELETE,etc]';
+  } else {
+    let a = await fetch(
+      args._[1],
+      ((b) => {
+        if (typeof b == 'undefined') {
+          return { method: 'GET' };
+        } else {
+          return { method: b };
+        }
+      })(args._[2]),
+    );
+    return '<pre>' + (await a.text()) + '</pre>';
+  }
+
+}
+export { dns, dig, curl };
