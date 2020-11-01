@@ -4,12 +4,12 @@
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
-    "lint": "prettier --check \"src/**/*.js\""
+    "lint": "prettier --check \"src/**/*.js\"",
+    "bundle:*": "@snowpack/plugin-webpack"
   },
   "dependencies": {
     "@babel/preset-env": "^7.12.1",
     "@snowpack/plugin-optimize": "^0.2.7",
-    "@snowpack/plugin-webpack": "^2.1.0",
     "canvas-confetti": "^1.2.0",
     "snowpack": "^2.16.1",
     "term-web": "^1.1.8"

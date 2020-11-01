@@ -1,6 +1,6 @@
-import { dns, dig } from './web.js';
+import { dig } from './web.js';
 import Term from 'term-web';
-import "./app.css";
+import './app.css';
 var $ = function (a) {
   return document.querySelector(a);
 };
@@ -11,7 +11,7 @@ terminal.term = new Term({
   title: 'Terminal at i@186526.xyz',
   prefix: 'i@186526.xyz: ~ <d color="#00f501">$</d> ',
   welcome: 'Welcome to <d color="#00f501">186526.xyz</d> terminal',
-  loading: () => 'Please Wait fot a moment……',
+  loading: () => 'Please Wait for a moment……',
   notFound: (val) => `<d color="#00f501">${val}</d> : Command not found`,
   actions: [
     {
@@ -105,7 +105,7 @@ terminal.term = new Term({
         let a = '';
         a += "<d color='#50fa7b'>186526.xyz & i.186526.xyz</d>\n";
         a +=
-          "Copyright © 19191 - 810 <d href='https://186526.xyz' color='yellow'>186526</d>\n";
+          "Copyright © 1919 - 1810 <d href='https://186526.xyz' color='yellow'>186526</d>\n";
         a += "Host By <d href='https://vercel.com' color='yellow'>Vercel</d>\n";
         a +=
           "CDN Provider <d href='https://cloudflare.com' color='yellow'>Cloudflare</d>\n";
