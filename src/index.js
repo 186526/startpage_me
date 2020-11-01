@@ -1,5 +1,6 @@
 import { dns, dig } from './web.js';
 import Term from 'term-web';
+import "./app.css";
 var $ = function (a) {
   return document.querySelector(a);
 };
