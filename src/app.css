@@ -8,7 +8,7 @@ div::-webkit-scrollbar {
   right: 0;
   filter: blur(2px);
   transition: all 0.1s;
-  background: url('https://api.ixiaowai.cn/api/api.php') center center / cover
+  background: url('./pic/backgroud.webp') center center / cover
     no-repeat;
   width: 100%;
   height: 100%;
