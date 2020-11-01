@@ -4,7 +4,12 @@ module.exports = {
     src: '/_dist_',
   },
   plugins: [
-    /* ... */
+    [
+      '@snowpack/plugin-webpack',
+      {
+        htmlMinifierOptions:true,
+      },
+    ],
   ],
   install: [
     /* ... */

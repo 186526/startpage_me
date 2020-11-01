@@ -7,11 +7,12 @@
     "lint": "prettier --check \"src/**/*.js\""
   },
   "dependencies": {
+    "@snowpack/plugin-webpack": "^2.1.0",
     "canvas-confetti": "^1.2.0",
+    "snowpack": "^2.16.1",
     "term-web": "^1.1.8"
   },
   "devDependencies": {
-    "prettier": "^2.0.5",
-    "snowpack": "^2.15.1"
+    "prettier": "^2.0.5"
   }
 }
