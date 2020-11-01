@@ -111,6 +111,8 @@ terminal.term = new Term({
           "CDN Provider <d href='https://cloudflare.com' color='yellow'>Cloudflare</d>\n";
         a +=
           "Thank <d href='https://github.com/zhw2590582/term-web' color='yellow'>term-web</d>\n";
+        a +=
+          "本网站由 <d href='https://console.upyun.com/register/?invite=S1_tWzl7P' color='yellow'> 又拍云 </d> 提供CDN/云存储支持";
         return a;
       },
     },
