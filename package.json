@@ -5,7 +5,7 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "prettier --check \"src/**/*.js\"",
-    "bundle:*": "@snowpack/plugin-webpack"
+    "prod": "rm -rf ./public/;vercel --prod"
   },
   "dependencies": {
     "@babel/preset-env": "^7.12.1",

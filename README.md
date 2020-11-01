@@ -1,24 +1,25 @@
-# New Project
+# startpage_me
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+A Startpage build by snowpack
 
-## Available Scripts
+## how to run
 
-### npm start
+### By Vercel 
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2F186526%2Fstartpage-me)
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+or
 
-### npm run build
+```bash
+npm install -g vercel
+vercel --prod
+```
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+### build with Snowpack 
 
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/master/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.json` config file.
+```bash
+npm install
+npm run build
+```
 
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+Copy `./public` to Website root
