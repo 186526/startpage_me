@@ -21,7 +21,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
-    /* ... */
+    out:"public"
   },
   proxy: {
     /* ... */
