@@ -1,0 +1,15 @@
+div::-webkit-scrollbar {
+  width: 0;
+}
+.bkpc {
+  scrollbar-width: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  filter: blur(2px);
+  transition: all 0.1s;
+  background: url('https://api.ixiaowai.cn/api/api.php') center center / cover
+    no-repeat;
+  width: 100%;
+  height: 100%;
+}

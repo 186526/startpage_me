@@ -117,6 +117,7 @@ terminal.term = new Term({
                 let a = "";
                 a += "<d color='#50fa7b'>dig</d>:<d color='yellow'>dig - DNS lookup utility</d>\n";
                 a += "<d color='#50fa7b'>curl</d>:<d color='yellow'>curl - transfer a URL</d>\n";
+                return a;
             }
         }
     ]
