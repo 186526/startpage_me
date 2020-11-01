@@ -1,0 +1,15 @@
+{
+    "routes": [
+        {
+            "src": "/(.*)",
+            "headers": {
+                "Cache-Control": "s-maxage=1209600, max-age=86400, public",
+                "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+                "Access-Control-Allow-Headers": "Accept, Authorization, Cache-Control, Content-Type, DNT, If-Modified-Since, Keep-Alive, Origin, User-Agent, X-Requested-With, Token, x-access-token"
+            },
+            "continue": true
+        }
+    ]
+}
