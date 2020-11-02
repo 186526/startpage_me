@@ -49,8 +49,20 @@ let config = {
             value: '<d href="https://github.com/186526">@186526</d>'
         },
         {
-            name: 'GPG',
+            name: 'email',
+            value: '<d href="mailto:i@186526.xyz">i@186526.xyz</d>'
+        }, 
+        {
+            name: 'Coolapk',
+            value: '<d href="https://www.coolapk.com/u/848581.">https://www.coolapk.com/u/848581.</d>'
+        },
+        {
+            name: 'GPG [i@186526.xyz]',
             value: '<d href="https://i.186526.xyz/pgp_keys.asc">https://i.186526.xyz/pgp_keys.asc</d>'
+        },
+        {
+            name: 'S/MIME Key [i@186526.xyz]',
+            value: '<d href="https://i.186526.xyz/i@186526.xyz.pem">https://i.186526.xyz/i@186526.xyz.pem</d>'
         },
         {
             name: 'Shell',
@@ -73,7 +85,7 @@ config.neofetch = (async (a) => {
     let b = '';
     let c = await fetch('./neofetch.output');
     if (c.status === 200) {
-        b+=await c.text();
+        b += await c.text();
     } else {
         throw 'Server Error';
     }
