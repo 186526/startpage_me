@@ -83,7 +83,7 @@ config.friends = ((a) => {
 })(config.friends);
 config.neofetch = (async (a) => {
     let b = '';
-    let c = await fetch('./neofetch.output');
+    let c = await fetch('./avatar');
     if (c.status === 200) {
         b += await c.text();
     } else {

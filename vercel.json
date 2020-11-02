@@ -10,6 +10,13 @@
                 "Access-Control-Allow-Headers": "Accept, Authorization, Cache-Control, Content-Type, DNT, If-Modified-Since, Keep-Alive, Origin, User-Agent, X-Requested-With, Token, x-access-token"
             },
             "continue": true
+        },
+        {
+            "src":"/avatar",
+            "headers": {
+                "Content-Type": "text/plain"
+            },
+            "continue": true
         }
     ]
 }
