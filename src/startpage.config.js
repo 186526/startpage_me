@@ -76,6 +76,10 @@ let config = {
     enabled: true,
     id: 'G-PVVC00CJ26',
   },
+  pwa:{
+    enabled: true,
+    sw_enabled: true,
+  }
 };
 config.friends = ((a) => {
   let b = '';

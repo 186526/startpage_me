@@ -140,4 +140,32 @@ window.onload = () => {
     gtag('js', new Date());
     gtag('config', config.ga.id);
   }
+  if (config.pwa.enabled) {
+    let b = document.createElement('link');
+    b.rel = 'manifest';
+    b.href = './manifest.json';
+    $('head').appendChild(b);
+    
+    if (config.pwa.sw_enabled) {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js', {
+          scope: '/'
+        }
+        ).then(function (registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function (err) {
+          console.warn('ServiceWorker registration failed: ', err);
+        });
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (refreshing) {
+            return;
+          }
+          refreshing = true;
+          console.log('Service Worker 更新中……');
+          window.location.reload();
+        });
+      }
+    }
+  }
 };

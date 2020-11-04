@@ -5,7 +5,8 @@
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "prettier --check \"src/**/*.js\"",
-    "prod": "rm -rf ./public/;vercel --prod"
+    "prod": "rm -rf ./public/;vercel --prod",
+    "vercel-dev": "vercel dev;rm -rf ./public/"
   },
   "dependencies": {
     "@babel/preset-env": "^7.12.1",

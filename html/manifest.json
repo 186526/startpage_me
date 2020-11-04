@@ -1,0 +1,14 @@
+{
+    "name": "186526 Homesite",
+    "short_name": "186526.xyz",
+    "lang": "zh-CN",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "https://static.186526.top/pic/avatar-round.webp",
+            "sizes": "512x512",
+            "type": "image/webp"
+        }
+    ]
+}
