@@ -92,7 +92,7 @@ async function dig(domain, type, short = false) {
     return 'Domain not found';
   }
 }
-async function curl(input, args){
+async function curl(input, args) {
   if (input === 'curl') {
     return 'curl url [GET/POST/PUT/DELETE,etc]';
   } else {
@@ -108,6 +108,5 @@ async function curl(input, args){
     );
     return '<pre>' + (await a.text()) + '</pre>';
   }
-
 }
 export { dns, dig, curl };
