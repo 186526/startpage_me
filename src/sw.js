@@ -49,11 +49,44 @@ if (workbox) {
         })
     );
     workbox.routing.registerRoute(
-        /\/pic/,
+        /\/css/,
         new workbox.strategies.StaleWhileRevalidate({
             plugins: [
                 new workbox.expiration.Plugin({
-                    maxAgeSeconds: 7 * 24 * 60 * 60,
+                    maxAgeSeconds: 7 * 24 * 60 * 60 * 4,
+                })
+            ],
+            cacheName: 'src'
+        })
+    );
+    workbox.routing.registerRoute(
+        /\/js/,
+        new workbox.strategies.StaleWhileRevalidate({
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxAgeSeconds: 7 * 24 * 60 * 60 * 4,
+                })
+            ],
+            cacheName: 'src'
+        })
+    );
+    workbox.routing.registerRoute(
+        /\/pic/,
+        new workbox.strategies.CacheFirst({
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxAgeSeconds: 24 * 60 * 60,
+                })
+            ],
+            cacheName: 'pic'
+        })
+    );
+    workbox.routing.registerRoute(
+        /\/assets/,
+        new workbox.strategies.CacheFirst({
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxAgeSeconds: 24 * 60 * 60,
                 })
             ],
             cacheName: 'pic'
