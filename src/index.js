@@ -162,6 +162,7 @@ window.onload = () => {
             return;
           }
           refreshing = true;
+          alert('正在更新Service Worker版本 请稍后……');
           console.log('Service Worker 更新中……');
           window.location.reload();
         });

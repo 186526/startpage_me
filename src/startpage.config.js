@@ -1,7 +1,8 @@
 let config = {
   terminal: {
     title: `Terminal at i@186526.xyz`,
-    prefix: `<d color="#00f501">i@186526.xyz</d><d color="white">:</d><d color="blue">~</d><d color="white">$</d> `,
+    user: 'i',
+    hostname: '186526.xyz',
     welcome: 'Welcome to <d color="#00f501">186526.xyz</d> terminal',
     actions: [],
   },
@@ -81,6 +82,7 @@ let config = {
     sw_enabled: true,
   }
 };
+config.terminal.prefix=`<d color="#00f501">${config.terminal.user}@${config.terminal.hostname}</d><d color="white">:</d><d color="blue">~</d><d color="white">$</d> `;
 config.friends = ((a) => {
   let b = '';
   b += `<d color="#ceedf2">My friend</d>\n`;
@@ -100,6 +102,7 @@ config.neofetch = (async (a) => {
   } else {
     throw 'Server Error';
   }
+  b += `<d color="#7f7f7f">${config.terminal.user}@${config.terminal.hostname}</d>\n`;
   b += '--------------------------\n';
   for (let i in a) {
     b += `<d color="#7f7f7f"> ${a[i].name}</d>: ${a[i].value}\n`;
