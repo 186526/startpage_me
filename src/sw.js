@@ -116,7 +116,7 @@ if (workbox) {
     );
     workbox.routing.registerRoute(
         '/',
-        new workbox.strategies.CacheFirst({
+        new workbox.strategies.StaleWhileRevalidate({
             plugins: [
                 new workbox.expiration.Plugin({
                     maxAgeSeconds: 60 * 60 * 24,
