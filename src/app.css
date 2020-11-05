@@ -2,15 +2,13 @@ div::-webkit-scrollbar {
   width: 0;
 }
 .bkpc {
-  position: absolute;
+  scrollbar-width: none;
+  position: fixed;
   top: 0;
   right: 0;
   filter: blur(10px);
   transition: all 0.1s;
-  background: url('../pic/backgroud.webp');
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url('../pic/backgroud.webp') center center / cover no-repeat;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
