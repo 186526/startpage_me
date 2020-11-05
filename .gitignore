@@ -2,3 +2,4 @@ public
 web_modules
 node_modules
 .vercel
+.public
