@@ -4,11 +4,19 @@
     "lang": "zh-CN",
     "start_url": "/",
     "display": "standalone",
+    "theme_color":"#2A2734",
+    "background_color":"#FBDBC4",
     "icons": [
         {
             "src": "./pic/avatar-round.webp",
             "sizes": "512x512",
             "type": "image/webp"
+        },
+        {
+            "src": "./pic/maskable.png",
+            "sizes": "568x568",
+            "type": "image/png",
+            "purpose": "any maskable"
         }
     ]
 }

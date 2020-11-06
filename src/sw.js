@@ -1,4 +1,3 @@
-self.version = '0.0.2 sw-test';
 importScripts(
   'https://cdn.jsdelivr.net/npm/workbox-cdn@4.2.0/workbox/workbox-sw.js',
 );
@@ -8,26 +7,15 @@ self.addEventListener('install', (e) => {
   self.skipWaiting();
 });
 self.addEventListener('activate', () => {
-  console.log('Service worker 激活||应用更新成功');
+  console.log('Service worker 激活||应用更新 成功');
 });
 if (workbox) {
   workbox.core.setCacheNameDetails({
     prefix: 'startpage_me',
-    suffix: '0.0.2 sw-test',
+    suffix: '0.0.3 sw-stable',
     precache: 'precache',
     runtime: 'runtime',
   });
-  workbox.routing.registerRoute(
-    '/_dist_/startpage.config.js',
-    new workbox.strategies.StaleWhileRevalidate({
-      plugins: [
-        new workbox.expiration.Plugin({
-          maxAgeSeconds: 7 * 24 * 60 * 60,
-        }),
-      ],
-      cacheName: 'src',
-    }),
-  );
   workbox.routing.registerRoute(
     /\/web_modules/,
     new workbox.strategies.CacheFirst({
@@ -52,7 +40,7 @@ if (workbox) {
   );
   workbox.routing.registerRoute(
     /\/css/,
-    new workbox.strategies.StaleWhileRevalidate({
+    new workbox.strategies.CacheFirst({
       plugins: [
         new workbox.expiration.Plugin({
           maxAgeSeconds: 7 * 24 * 60 * 60 * 4,
@@ -63,7 +51,7 @@ if (workbox) {
   );
   workbox.routing.registerRoute(
     /\/js/,
-    new workbox.strategies.StaleWhileRevalidate({
+    new workbox.strategies.CacheFirst({
       plugins: [
         new workbox.expiration.Plugin({
           maxAgeSeconds: 7 * 24 * 60 * 60 * 4,

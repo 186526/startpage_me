@@ -6,7 +6,7 @@ div::-webkit-scrollbar {
   position: fixed;
   top: 0;
   right: 0;
-  filter: blur(10px);
+  filter: blur(2px);
   transition: all 0.1s;
   background: url('../pic/backgroud.webp') center center / cover no-repeat;
   width: 100%;
