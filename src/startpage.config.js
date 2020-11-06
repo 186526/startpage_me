@@ -77,12 +77,12 @@ let config = {
     enabled: true,
     id: 'G-PVVC00CJ26',
   },
-  pwa:{
+  pwa: {
     enabled: true,
     sw_enabled: true,
-  }
+  },
 };
-config.terminal.prefix=`<d color="#00f501">${config.terminal.user}@${config.terminal.hostname}</d><d color="white">:</d><d color="blue">~</d><d color="white">$</d> `;
+config.terminal.prefix = `<d color="#00f501">${config.terminal.user}@${config.terminal.hostname}</d><d color="white">:</d><d color="blue">~</d><d color="white">$</d> `;
 config.friends = ((a) => {
   let b = '';
   b += `<d color="#ceedf2">My friend</d>\n`;

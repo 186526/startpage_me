@@ -145,17 +145,22 @@ window.onload = () => {
     b.rel = 'manifest';
     b.href = './manifest.json';
     $('head').appendChild(b);
-    
+
     if (config.pwa.sw_enabled) {
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./sw.js', {
-          scope: '/'
-        }
-        ).then(function (registration) {
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }).catch(function (err) {
-          console.warn('ServiceWorker registration failed: ', err);
-        });
+        navigator.serviceWorker
+          .register('./sw.js', {
+            scope: '/',
+          })
+          .then(function (registration) {
+            console.log(
+              'ServiceWorker registration successful with scope: ',
+              registration.scope,
+            );
+          })
+          .catch(function (err) {
+            console.warn('ServiceWorker registration failed: ', err);
+          });
         let refreshing = false;
         navigator.serviceWorker.addEventListener('controllerchange', () => {
           if (refreshing) {

@@ -17,10 +17,6 @@
                 "Content-Type": "text/plain"
             },
             "continue": true
-        },
-        {
-            "src":"/sw.js",
-            "dest":"/_dist_/sw.js"
         }
     ]
 }
