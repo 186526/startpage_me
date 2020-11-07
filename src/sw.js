@@ -12,7 +12,7 @@ self.addEventListener('activate', () => {
 if (workbox) {
   workbox.core.setCacheNameDetails({
     prefix: 'startpage_me',
-    suffix: '0.0.3 sw-stable',
+    suffix: '0.0.4 sw-stable',
     precache: 'precache',
     runtime: 'runtime',
   });
@@ -68,7 +68,7 @@ if (workbox) {
           maxAgeSeconds: 24 * 60 * 60,
         }),
       ],
-      cacheName: 'pic',
+      cacheName: 'assets',
     }),
   );
   workbox.routing.registerRoute(
@@ -79,7 +79,7 @@ if (workbox) {
           maxAgeSeconds: 24 * 60 * 60,
         }),
       ],
-      cacheName: 'pic',
+      cacheName: 'assets',
     }),
   );
   workbox.routing.registerRoute(

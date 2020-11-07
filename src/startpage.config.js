@@ -109,4 +109,13 @@ config.neofetch = (async (a) => {
   }
   return b;
 })(config.neofetch);
+config.ga.enabled = ((a) => {
+  if (a === 'G-PVVC00CJ26' && window.location.host == '186526.xyz') {
+    return true;
+  } else if (window.location.host.search('localhost') != -1) {
+    return false;
+  } else {
+    return config.ga.enabled;
+  }
+})(config.ga.id);
 export { config };
