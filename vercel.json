@@ -12,11 +12,39 @@
             "continue": true
         },
         {
-            "src":"/avatar",
+            "src": "/avatar",
             "headers": {
                 "Content-Type": "text/plain"
             },
             "continue": true
+        },
+        {
+            "src": "/goto/github",
+            "status": 302,
+            "headers": {
+                "Location": "https://github.com/186526"
+            }
+        },
+        {
+            "src": "/goto/telegram",
+            "status": 302,
+            "headers": {
+                "Location": "https://t.me/real186526"
+            }
+        },
+        {
+            "src": "/goto/blog",
+            "status": 302,
+            "headers": {
+                "Location": "https://blogging.186526.xyz"
+            }
+        },
+        {
+            "src": "/goto/email",
+            "status": 302,
+            "headers": {
+                "Location": "mailto:i@186526.xyz"
+            }
         }
     ]
 }

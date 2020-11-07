@@ -72,6 +72,17 @@ if (workbox) {
     }),
   );
   workbox.routing.registerRoute(
+    /\/icons/,
+    new workbox.strategies.CacheFirst({
+      plugins: [
+        new workbox.expiration.Plugin({
+          maxAgeSeconds: 24 * 60 * 60,
+        }),
+      ],
+      cacheName: 'assets',
+    }),
+  );
+  workbox.routing.registerRoute(
     /\/assets/,
     new workbox.strategies.CacheFirst({
       plugins: [
@@ -95,7 +106,7 @@ if (workbox) {
   );
   workbox.routing.registerRoute(
     '/manifest.json',
-    new workbox.strategies.CacheFirst({
+    new workbox.strategies.StaleWhileRevalidate({
       plugins: [
         new workbox.expiration.Plugin({
           maxAgeSeconds: 7 * 24 * 60 * 60,
