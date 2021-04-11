@@ -85,7 +85,7 @@ let config = {
 config.terminal.prefix = `<d color="#00f501">${config.terminal.user}@${config.terminal.hostname}</d><d color="white">:</d><d color="blue">~</d><d color="white">$</d> `;
 config.friends = ((a) => {
   let b = '';
-  b += `<d color="#ceedf2">My friend</d>\n`;
+  b += `<d color="#ceedf2">My friends</d>\n`;
   for (let i in a) {
     b += `        <d color="#00cdcd">name</d>:<d color="#7f7f7f">${a[i].name}</d>\n`;
     b += `        <d color="#00cdcd">description</d>:<d color="#7f7f7f">${a[i].description}</d>\n`;
